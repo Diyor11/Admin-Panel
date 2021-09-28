@@ -1,0 +1,24 @@
+.app{
+    color: var(--txt-color);
+}
+.app__content{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 300px;
+}
+.app__content-main{
+    padding: 30px;
+    position: relative;
+}
+
+@media(max-width: 992px){
+    .app__content{
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .app__content-main{
+        padding: 10px;
+    }
+}
