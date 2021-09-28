@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './sidebar.scss';
 import { Link } from 'react-router-dom'
 
@@ -43,8 +43,9 @@ const Sidebar = (props) => {
     const sidebarContentRef = useRef(null);
     const sidebarToggleRef = useRef(null);
 
-    clickSidebarRef(sidebarContentRef, sidebarToggleRef)
-
+    useEffect(() => {
+        clickSidebarRef(sidebarContentRef, sidebarToggleRef);
+    }, [])
     return (
         <div className={`sidebar ${theme.mode}`} ref={sidebarContentRef}>
             <div className='sidebar__logo'>
