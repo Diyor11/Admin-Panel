@@ -25,9 +25,11 @@ const clickSidebarRef = (content_ref, toggle_ref) => {
             content_ref.current.classList.toggle('show');
             toggle_ref.current.classList.toggle('fa-chevron-right');
         }
-        else if(content_ref.current){
+        else{
+            if(content_ref.current){
             content_ref.current.classList.remove('show');
             toggle_ref.current.classList.add('fa-chevron-right')
+            }
         }
     })
 }
